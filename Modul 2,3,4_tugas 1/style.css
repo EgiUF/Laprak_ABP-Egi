@@ -1,0 +1,90 @@
+/* Nama : Egi Umar Ferdhika */
+/* NIM : 2311102277 */
+/* Kelas : S1IF-11-07 */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#444;
+color:white;
+padding:15px 40px;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+}
+
+nav li{
+margin-left:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:70vh;
+background-image: url("Background-test.png");
+background-size: cover;
+background-position: center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:black;
+}
+
+.hero-text h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:white;
+color:#333;
+cursor:pointer;
+}
+
+.services{
+padding:50px;
+text-align:center;
+}
+
+.container{
+display:flex;
+justify-content:center;
+margin-top:30px;
+gap:20px;
+}
+
+.card{
+background:#f4f4f4;
+padding:25px;
+width:220px;
+border-radius:8px;
+}
+
+.about{
+background:#eee;
+padding:50px;
+text-align:center;
+}
+
+footer{
+background:#444;
+color:white;
+text-align:center;
+padding:15px;
+}
