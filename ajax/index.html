@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX jQuery Advanced</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+</head>
+<body>
+
+<h2>The jQuery AJAX</h2>
+<p id="demo">Let AJAX change this text.</p>
+
+<button type="button" id="changeBtn">Change Content</button>
+
+<script>
+$(document).ready(function() {
+    $("#changeBtn").click(function() {
+
+        $.ajax({
+            // file yang diambil
+            url: "ajax_info.txt",
+
+            // metode request
+            type: "GET",
+
+            // data (opsional, boleh ada boleh tidak)
+            data: {
+                id: 123,
+                name: "John"
+            },
+
+            // tipe data dari server
+            dataType: "html",
+
+            // waktu maksimal request (ms)
+            timeout: 5000,
+
+            // kalau berhasil
+            success: function(result) {
+                $("#demo").html(result);
+            },
+
+            // kalau error
+            error: function(xhr, status, error) {
+                $("#demo").html("Error: " + error);
+            },
+
+            // selalu dijalankan
+            complete: function(xhr, status) {
+                console.log("Request selesai: " + status);
+            }
+        });
+
+    });
+});
+</script>
+
+</body>
+</html>
